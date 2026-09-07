@@ -1,9 +1,113 @@
+:root {
+  --bg: #0f0e14;
+  --bg-elevated: #12111A;
+  --text: #f0eae2;
+  --text-muted: #a79da0;
+  --teal: #4fadb0;
+  --mauve: #c98ba3;
+  --border: rgba(255, 255, 255, 0.1);
+
+  --font-serif: 'Instrument Serif', serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-mono: 'Space Mono', monospace;
+
+  --max-w: 1160px;
+}
+
 * {
   box-sizing: border-box;
 }
 
-html,
+html {
+  scroll-behavior: auto; /* Lenis owns smooth scrolling, not native CSS */
+}
+
 body {
   margin: 0;
-  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 400;
+  font-family: var(--font-serif);
+}
+
+p {
+  margin: 0;
+}
+
+em {
+  color: var(--mauve);
+  font-style: italic;
+}
+
+a {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 3px;
+}
+
+.section-pad {
+  max-width: var(--max-w);
+  margin-inline: auto;
+  padding: clamp(3rem, 8vw, 6rem) clamp(1.25rem, 4vw, 2rem);
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+}
+
+.site-mark {
+  position: fixed;
+  top: 1.5rem;
+  left: 1.5rem;
+  z-index: 40;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--text);
+  text-decoration: none;
+  opacity: 0.9;
+}
+
+.site-mark:hover {
+  opacity: 1;
+}
+
+.btn {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 0.75rem 1.6rem;
+  border-radius: 9999px;
+  text-decoration: none;
+}
+
+.btn-solid {
+  background: var(--teal);
+  color: #0f0e14;
+}
+
+.btn-solid:hover {
+  background: #6fc0c2;
 }
