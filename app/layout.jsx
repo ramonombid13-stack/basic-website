@@ -1,4 +1,5 @@
 import './globals.css';
+import LenisProvider from '@/components/LenisProvider';
 
 export const metadata = {
   title: 'Ramon Ombid — Systems Builder',
@@ -25,7 +26,7 @@ export default function RootLayout({ children }) {
         <a href="/" className="site-mark">
           Ramon Ombid
         </a>
-        {children}
+        <LenisProvider>{children}</LenisProvider>
       </body>
     </html>
   );
