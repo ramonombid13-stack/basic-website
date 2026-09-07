@@ -4,3 +4,6 @@ Thumbs.db
 .vercel
 .env*
 .superpowers/
+node_modules/
+.next/
+.claude/
