@@ -36,3 +36,17 @@ Plan: `docs/superpowers/plans/2026-09-07-awwwards-showcase-redesign.md`
 ## Known issue (not part of this repo, flagged separately)
 Two case-study images pulled from Ramon's live havemonmentum.com carousel exposed his
 personal phone/email — his live site's public carousel may still be showing this.
+
+## Status
+All 15 plan tasks complete, reviewed, and deployed live at `basic-website-amber.vercel.app`.
+Still pending: the plan's final whole-branch review + `superpowers:finishing-a-development-branch`
+step. Contact section ships with placeholder email `you@example.com` — replace before sharing
+the link. Deployment Protection may still gate non-`amber` project URLs behind Vercel SSO —
+not yet confirmed whether that's desired.
+
+## Vercel gotcha (already hit once, worth knowing)
+This Vercel project's Framework Preset was stuck on "Other" (leftover from the pre-Next.js
+static-site era), which caused the production alias to serve a platform `NOT_FOUND` even
+though deployments showed `Ready` and were correctly aliased. Fix: Project Settings → Build
+and Deployment → Framework Preset → "Next.js", then a fresh `vercel --prod` deploy (a
+settings change alone doesn't retroactively fix an already-built deployment).
