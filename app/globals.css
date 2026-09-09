@@ -141,6 +141,14 @@ a {
   transition: opacity 0.2s ease;
 }
 
+.hero-static-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .hero-headline {
   font-family: var(--font-serif);
   font-size: clamp(1.6rem, 4vw, 2.8rem);
